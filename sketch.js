@@ -1,4 +1,4 @@
-let nPelotas = 1000;
+let nPelotas = 100;
 let pelotas = [];
 
 function setup() {
@@ -9,6 +9,7 @@ function setup() {
 }
 
 function draw() {
+	background('rgba(255,255,255,0.05)');
 	for (let i = 0; i < nPelotas; i++) {
 		pelotas[i].update();
 		pelotas[i].display();
@@ -27,7 +28,7 @@ class RandomWalek {
 		this.blue = random(100, 150);
 
 		this.t = 0;
-		this.tSpeed = random(0.5);
+		this.tSpeed = random(0.2);
 		this.noiseShift = random(1000);
 
 		this.pos = createVector(width / 2, height / 2);
